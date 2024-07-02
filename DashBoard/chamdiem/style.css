@@ -1,0 +1,156 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Khoảng cách với nội dung bên dưới */
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Tùy chỉnh cho các hàng tiêu đề con (như I.a.1) */
+  tbody tr td:first-child { /* Ô STT */
+    text-align: center; 
+  }
+  
+  tbody tr td:nth-child(2) { /* Ô Mã tiêu chí */
+    font-weight: bold;
+  }
+  
+
+  .logo {
+    width: 150px;
+}
+
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: flex;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar-header .logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar-item {
+  width: 100%;
+  text-align: left;
+}
+
+.sidebar-item a {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.sidebar-item a i {
+  margin-right: 10px;
+}
+
+.sidebar-item a:hover {
+  background-color: #34495e;
+}
+
+.sidebar-item a.active {
+  background-color: #1abc9c;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #ecf0f1;
+}
+
+
+/* Button Container */
+.button_submit {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px; /* Space between buttons */
+  margin-top: 20px;
+}
+
+/* Button Styles */
+.button_submit button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button_submit button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.button_submit button:active {
+  background-color: #2980b9;
+  transform: translateY(0);
+}
+
+.button_submit button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Specific Button Styles */
+.button_submit button:first-of-type {
+  background-color: #1abc9c;
+}
+
+.button_submit button:first-of-type:hover {
+  background-color: #16a085;
+}
+
+.button_submit button:first-of-type:active {
+  background-color: #16a085;
+}

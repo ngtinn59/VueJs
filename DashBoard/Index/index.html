@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.css">
+    <style>
+        /* CSS styles for the modal dialog */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.4); 
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+        }
+        /* CSS styles for the modal dialog */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.4); 
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://viethope.org/wp-content/uploads/2021/06/Cropped-VietHope-Logo-300x225.png" alt="" class="logo">
+                <ul class="sidebar-menu">
+                    <li class="sidebar-item">
+                        <a href="/DashBoard/Index/index.html"><i class="fa-solid fa-user-tie"></i>Tình Nguyện Viên A</a>
+                        <a href="/DashBoard/Index/index.html"><i class="fa-solid fa-list"></i>Danh sách chấm điểm</a>
+                        <a href="#" id="huong-dan"><i class="fa-solid fa-circle-info"></i>Hướng dẫn</a>
+                        <a href="#" id="huong-dan-cham-may"><i class="fa-solid fa-robot"></i></i> Hướng dẫn chấm máy</a>
+                        <a href="#"><i class="fa-solid fa-right-from-bracket"></i>Đăng xuất</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <table>
+                <div class="content"> <h1>Danh sách hồ sơ chấm điểm</h1> <table> <thead> <tr> <th>STT</th> <th>Mã hồ sơ</th> <th>Họ tên</th> <th>Trường</th> <th>Chấm điểm</th> </tr> </thead> <tbody> <tr> <td>1</td> <td>NVSG23005</td> <td>Trần Thị Cẩm Tú</td> <td>Đại học Khoa học xã hội và Nhân văn</td> <td><a href="/DashBoard/chamdiem/index.html">Nhấn vào để chấm điểm</a></td> </tr> <!-- Repeat similar rows for other records --> </tbody> </table> </div>
+            </table>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>HƯỚNG DẪN CHẤM HỒ SƠ VSDP 2023</h2>
+            <p>"Thay mặt VietHope, Ban điều hành (BĐH) VSDP 2023 xin gửi lời cảm ơn đến các Tình Nguyện Viên (TNV) vì đã dành thời gian quý báu của mình để hoàn thành chấm điểm hồ sơ. Phần chấm điểm này rất quan trọng để chọn lọc được những hồ sơ vào vòng phỏng vấn.</p>
+            <p>- Hãy đọc kỹ thang điểm và hướng dẫn chi tiết dưới đây để biết cách chấm điểm. Mỗi hồ sơ chấm điểm phải chu đáo, cân nhắc kỹ càng vì chỉ thiếu 1đ cũng có thể loại 1 hồ sơ. Chấm đúng hồ sơ được phân chia, nếu có sai sót gì vui lòng báo ngay cho BĐH.</p>
+            <p>- Một số cột điểm đã được máy tính chấm tự động dựa trên thang điểm và bạn không cần chỉnh sửa phần này.</p>
+            <p>- Phần bạn sẽ chấm dựa trên các thông tin từ hồ sơ html được share qua email, bao gồm:</p>
+            <ol>
+                <li>Đánh giá chung về gia cảnh</li>
+                <li>Điểm hai bài luận</li>
+                <li>Điểm thưởng</li>
+            </ol>
+            
+            <h3>Thang điểm VSDP 2023 - Tiêu chí</h3>
+            <table>
+                <tr>
+                    <th>Tổng số điểm</th>
+                    <td>120 điểm</td>
+                </tr>
+            </table>
+            
+            <h4>A - Thành tích học tập</h4>
+            <table>
+                <tr>
+                    <th>Tiêu chí</th>
+                    <th>Số điểm cao nhất</th>
+                    <th>Chấm bởi</th>
+                </tr>
+                <tr>
+                    <td>Điểm trung bình năm lớp 12</td>
+                    <td>10 điểm</td>
+                    <td>Máy</td>
+                </tr>
+                <tr>
+                    <td>Điểm thi đại học</td>
+                    <td>12 điểm</td>
+                    <td>Máy</td>
+                </tr>
+                <tr>
+                    <td>Giải thưởng</td>
+                    <td>4 điểm</td>
+                    <td>Máy</td>
+                </tr>
+            </table>
+            
+            <h4>B - Gia cảnh</h4>
+            <table>
+                <tr>
+                    <th>Tiêu chí</th>
+                    <th>Số điểm cao nhất</th>
+                    <th>Chấm bởi</th>
+                </tr>
+                <tr>
+                    <td>Sổ hộ nghèo hay Giấy xác nhận hoàn cảnh khó khăn</td>
+                    <td>10 điểm</td>
+                    <td>Máy</td>
+                </tr>
+                <tr>
+                    <td>Số thành viên trong gia đình và nghề nghiệp</td>
+                    <td>12 điểm</td>
+                    <td>Máy</td>
+                </tr>
+                <tr>
+                    <td>Sức khỏe của cha mẹ</td>
+                    <td>14 điểm</td>
+                    <td>Máy</td>
+                </tr>
+                <tr>
+                    <td>Công việc làm thêm của sinh viên</td>
+                    <td>2 điểm</td>
+                    <td>Máy</td>
+                </tr>
+                <tr>
+                    <td>Đánh giá chung về gia cảnh của sinh viên</td>
+                    <td>15 điểm</td>
+                    <td>TNV</td>
+                </tr>
+            </table>
+            
+            <h4>C - Luận văn</h4>
+            <table>
+                <tr>
+                    <th>Tiêu chí</th>
+                    <th>Số điểm cao nhất</th>
+                    <th>Chấm bởi</th>
+                </tr>
+                <tr>
+                    <td>Tự trình bày (câu 1)</td>
+                    <td>18 điểm</td>
+                    <td>TNV</td>
+                </tr>
+                <tr>
+                    <td>Tự trình bày (câu 2)</td>
+                    <td>18 điểm</td>
+                    <td>TNV</td>
+                </tr>
+            </table>
+            
+            <h4>D - Điểm thưởng</h4>
+            <table>
+                <tr>
+                    <th>Tiêu chí</th>
+                    <th>Số điểm cao nhất</th>
+                    <th>Chấm bởi</th>
+                </tr>
+                <tr>
+                    <td>Điểm thưởng</td>
+                    <td>5 điểm</td>
+                    <td>Máy + TNV</td>
+                </tr>
+            </table>
+            
+            <h3>CHI TIẾT CÁCH CHẤM ĐIỂM CỦA TÌNH NGUYỆN VIÊN (TNV sẽ cần đọc hiểu phần này để chấm)</h3>
+            
+            <h4>B5. Đánh giá chung về gia cảnh của sinh viên</h4>
+            <p>Phần này là đánh giá chủ quan của bạn về hoàn cảnh của gia đình sinh viên dựa trên những thông tin về tình trạng kinh tế trong hồ sơ: thu nhập, nghề nghiệp của cha mẹ, trong bài luận văn nếu sinh viên có nêu ra hoàn cảnh khó khăn về tài chính, thư giới thiệu nếu giáo viên có đánh giá về hoàn cảnh gia đình của sinh viên, chi tiết trong giấy xác nhận gia cảnh, cũng như là tình hình sức khỏe của cha mẹ sinh viên v.v...</p>
+            <p>Bạn chấm theo thang điểm dưới đây:</p>
+            <ul>
+                <li>i. Sinh viên thật sự nghèo, rất cần giúp đỡ: 8-15 điểm</li>
+                <li>ii. Sinh viên có gặp khó khăn: 1-7 điểm</li>
+                <li>iii. Sinh viên không gặp khó khăn về vấn đề tài chính: 0 điểm</li>
+            </ul>
+            
+            <h4>C - Luận văn</h4>
+            
+            <p>Câu hỏi được đặt ra nhằm tìm hiểu rõ hơn về người sinh viên nộp đơn, ý chí quyết tâm vượt khó, hiếu học, khả năng tự trình bày thuyết phục.</p>
+            
+            <h5>Câu hỏi 1: Em hãy trình bày một cách chi tiết nhất về hoàn cảnh gia đình em hiện nay và những khó khăn, thử thách đã gặp phải khi theo đuổi việc học.</h5>
+            <p>Max 18 điểm</p>
+            <table>
+                <tr>
+                    <th>Phần</th>
+                    <th>Điểm tối đa</th>
+                    <th>Chấm điểm</th>
+                </tr>
+                <tr>
+                    <td>Hoàn cảnh gia đình</td>
+                    <td>10 điểm</td>
+                    <td>TNV</td>
+                </tr>
+                <tr>
+                    <td>Khó khăn thử thách</td>
+                    <td>8 điểm</td>
+                    <td>TNV</td>
+                </tr>
+            </table>
+            
+            <h5>Câu hỏi 2: Theo bạn những phẩm chất/ thế mạnh gì đã giúp bạn vượt qua những khó khăn trong quá khứ để tiếp tục việc học? Trong những năm học đại học sắp tới, những thách thức lớn nhất của bạn là gì? Bạn dự định sẽ sử dụng những thế mạnh của mình để vượt qua những thách thức đó như thế nào để theo đuổi con đường học vấn?</h5>
+            <p>Max 18 điểm</p>
+            <table>
+                <tr>
+                    <th>Phần</th>
+                    <th>Điểm tối đa</th>
+                    <th>Chấm điểm</th>
+                </tr>
+                <tr>
+                    <td>Hiểu về thế mạnh bản thân</td>
+                    <td>7 điểm</td>
+                    <td>TNV</td>
+                </tr>
+                <tr>
+                    <td>Thách thức ở những năm đại học</td>
+                    <td>6 điểm</td>
+                    <td>TNV</td>
+                </tr>
+                <tr>
+                    <td>Cách vượt qua thử thách</td>
+                    <td>5 điểm</td>
+                    <td>TNV</td>
+                </tr>
+            </table>
+            
+            <h4>D - Điểm thưởng</h4>
+            <p>Phần này có 3 điểm hoàn toàn do bạn quyết định để tăng thêm khả năng nhận được học bổng của sinh viên.</p>
+            <ul>
+                <li>Nếu bạn nghĩ sinh viên xứng đáng nhận học bổng VietHope vì những lý do chưa được nhắc đến ở trên, bạn có thể cho thêm từ 0 đến 2 điểm để tăng khả năng được học bổng. Điểm thưởng này sẽ được cộng vào trong tổng số điểm của hồ sơ khi xếp hạng để quyết định danh sách vào vòng phỏng vấn. Người chấm sẽ dựa trên tất cả các tiêu chí đã nêu trên hồ sơ như: thành tích học tập, gia cảnh, luận văn, hoặc có thư giới thiệu có nhận xét của giáo viên về những phẩm chất của sinh viên như ý chí vượt khó, kiên trì, tính chủ động, v.v... về hoàn cảnh gia đình của sinh viên để cho thêm điểm.</li>
+                <li>Đề nghị cộng 1 điểm cho sinh viên có sự nỗ lực và nghiêm túc khi làm đơn. Ví dụ: có nỗ lực chuẩn bị đầy đủ hồ sơ, thể hiện cao mong muốn được nhận học bổng xuyên suốt hồ sơ và không viết tắt nhiều trong trình bày.</li>
+            </ul>
+            
+            <p>Mọi thắc mắc, xin liên hệ Khánh Trúc (truc.ngo@viethope.org) tel: 0329100405</p>
+        </div>
+    </div>
+   <!-- Modal for Hướng dẫn -->
+   <div id="modalHuongDan" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>HƯỚNG DẪN CHẤM HỒ SƠ VSDP 2023</h2>
+        <p>"Thay mặt VietHope, Ban điều hành (BĐH) VSDP 2023 xin gửi lời cảm ơn đến các Tình Nguyện Viên (TNV) vì đã dành thời gian quý báu của mình để hoàn thành chấm điểm hồ sơ. Phần chấm điểm này rất quan trọng để lựa chọn những hồ sơ tiềm năng vào vòng phỏng vấn.</p>
+        <p>- Hãy đọc kỹ thang điểm và hướng dẫn chi tiết dưới đây để biết cách chấm điểm. Mỗi hồ sơ chấm điểm phải chu đáo, cân nhắc kỹ càng vì chỉ thiếu 1 điểm cũng có thể loại bỏ một hồ sơ. Chấm đúng hồ sơ được phân chia, nếu có sai sót gì vui lòng báo ngay cho BĐH.</p>
+        <p>- Một số cột điểm đã được máy tính chấm tự động dựa trên thang điểm và bạn không cần chỉnh sửa phần này.</p>
+        <p>- Phần bạn sẽ chấm dựa trên các thông tin từ hồ sơ html được chia sẻ qua email, bao gồm:</p>
+        <ol>
+            <li>Đánh giá chung về gia cảnh</li>
+            <li>Điểm hai bài luận</li>
+            <li>Điểm thưởng</li>
+        </ol>
+        <h3>Thang điểm VSDP 2023 - Tiêu chí</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tiêu chí</th>
+                    <th>Số điểm cao nhất</th>
+                    <th>Chấm bởi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tổng số điểm</td>
+                    <td>120 điểm</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>A - Thành tích học tập</td>
+                    <td>26 điểm</td>
+                    <td>Máy</td>
+                </tr>
+                <tr>
+                    <td>1. Điểm trung bình năm lớp 12</td>
+                    <td>10 điểm</td>
+                    <td>Máy</td>
+                </tr>
+                <tr>
+                    <td>2. Điểm thi đại học</td>
+                    <td>12 điểm</td>
+                    <td>Máy</td>
+                </tr>
+                <tr>
+                    <td>3. Giải thưởng</td>
+                    <td>4 điểm</td>
+                    <td>Máy</td>
+                </tr>
+                <tr>
+                    <td>B - Gia cảnh</td>
+                    <td>53 điểm</td>
+                    <td>Máy + TNV</td>
+                </tr>
+                <tr>
+                    <td>1. Sổ hộ nghèo hoặc Giấy xác nhận khó khăn</td>
+                    <td>10 điểm</td>
+                    <td>Máy</td>
+                </tr>
+                <tr>
+                    <td>2. Số thành viên trong gia đình và nghề nghiệp</td>
+                    <td>12 điểm</td>
+                    <td>Máy</td>
+                </tr>
+                <tr>
+                    <td>3. Sức khỏe của cha mẹ</td>
+                    <td>14 điểm</td>
+                    <td>Máy</td>
+                </tr>
+                <tr>
+                    <td>4. Công việc làm thêm của sinh viên</td>
+                    <td>2 điểm</td>
+                    <td>Máy</td>
+                </tr>
+                <tr>
+                    <td>5. Đánh giá chung về gia cảnh của sinh viên</td>
+                    <td>15 điểm</td>
+                    <td>TNV</td>
+                </tr>
+                <tr>
+                    <td>C - Luận văn</td>
+                    <td>36 điểm</td>
+                    <td>TNV</td>
+                </tr>
+                <tr>
+                    <td>1. Tự trình bày (câu 1)</td>
+                    <td>18 điểm</td>
+                    <td>TNV</td>
+                </tr>
+                <tr>
+                    <td>2. Tự trình bày (câu 2)</td>
+                    <td>18 điểm</td>
+                    <td>TNV</td>
+                </tr>
+                <tr>
+                    <td>D - Điểm thưởng</td>
+                    <td>5 điểm</td>
+                    <td>Máy + TNV</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>CHI TIẾT CÁCH CHẤM ĐIỂM CỦA TÌNH NGUYỆN VIÊN (TNV)</h3>
+        <p>B5. Đánh giá chung về gia cảnh của sinh viên:</p>
+        <p>- Phần này là đánh giá chủ quan của bạn về hoàn cảnh của gia đình sinh viên dựa trên những thông tin về tình trạng kinh tế trong hồ sơ: thu nhập, nghề nghiệp của cha mẹ, trong bài luận văn nếu sinh viên có nêu ra hoàn cảnh khó khăn về tài chính, thư giới thiệu nếu giáo viên có đánh giá về hoàn cảnh gia đình của sinh viên, chi tiết trong giấy xác nhận gia cảnh, cũng như là tình hình sức khỏe của cha mẹ sinh viên v.v...</p>
+        <p>- Bạn chấm theo thang điểm:</p>
+        <ul>
+            <li>i. Sinh viên thật sự nghèo, rất cần giúp đỡ: 8-15 điểm</li>
+            <li>ii. Sinh viên có gặp khó khăn: 1-7 điểm</li>
+            <li>iii. Sinh viên không gặp khó khăn về vấn đề tài chính: 0 điểm</li>
+        </ul>
+        <p>C. Luận văn:</p>
+        <p>- Câu hỏi được đặt ra nhằm tìm hiểu rõ hơn về người sinh viên nộp đơn, ý chí quyết tâm vượt khó, hiếu học, khả năng tự trình bày thuyết phục.</p>
+        <p>- Chi tiết từng phần cho từng câu hỏi:</p>
+        <p><strong>Câu 1:</strong> Em hãy trình bày một cách chi tiết nhất về hoàn cảnh gia đình em hiện nay và những khó khăn, thử thách đã gặp phải khi theo đuổi việc học.</p>
+        <ul>
+            <li>1.1. Hoàn cảnh gia đình: Max 10 điểm</li>
+            <li>1.2. Trình bày những khó khăn thử thách của bản thân khi theo đuổi việc học: Max 8 điểm</li>
+        </ul>
+        <p><strong>Câu 2:</strong> "Theo bạn những phẩm chất/ thế mạnh gì đã giúp bạn vượt qua những khó khăn trong quá khứ để tiếp tục việc học? Trong những năm tới bạn sẽ làm gì để phát triển mình theo hướng học tập của bạn ra sao?"</p>
+        <ul>
+            <li>2.1. Hiểu về thế mạnh bản thân: Max 7 điểm</li>
+            <li>2.2. Thách thức ở những năm đại học: Max 6 điểm</li>
+            <li>2.3. Cách sinh viên sẽ vượt qua thử thách: Max 5 điểm</li>
+        </ul>
+        <p>D. Điểm thưởng:</p>
+        <p>- Phần này có 3 điểm hoàn toàn do bạn quyết định. Mục đích là để tăng thêm một ít khả năng nhận được học bổng của sinh viên.</p>
+        <ul>
+            <li>i. Nếu bạn nghĩ sinh viên xứng đáng nhận học bổng VietHope vì những lý do chưa được nhắc đến ở trên, bạn có thể cho thêm từ 0 đến 2 điểm để tăng khả năng được học bổng. Điểm thưởng này sẽ được cộng vào trong tổng số điểm của hồ sơ khi xếp hạng để quyết định danh sách vào vòng phỏng vấn.</li>
+            <li>ii. Đề nghị cộng 1 điểm cho sinh viên có sự nổ lực và nghiêm túc khi làm đơn.</li>
+        </ul>
+        <p>Mọi thắc mắc, xin liên hệ Khánh Trúc (<a href="mailto:truc.ngo@viethope.org">truc.ngo@viethope.org</a>) tel: 0329100405</p>
+    </div>
+</div>
+
+
+<!-- Modal for Hướng dẫn chấm máy -->
+<div id="modalHuongDanChamMay" class="modal">
+    <div class="modal-content">
+        <p>CÁCH TÍNH ĐIỂM MÁY CHẤM (Đây chỉ là phần tham khảo thêm, phần này đã được máy chấm)</p>
+        <p>A. Thành tích học tập 26 điểm</p>
+        <ul>
+            <li>1. Điểm trung bình các môn năm lớp 12 (quy ra thang điểm 10): Điểm này do máy chấm
+                <ul>
+                    <li>i. Lớn hơn hoặc bằng 8.5: 10 điểm</li>
+                    <li>ii. Lớn hơn hoặc bằng 8.0 nhưng nhỏ hơn 8.5: 9 điểm</li>
+                    <li>iii. Lớn hơn hoặc bằng 7.5 nhưng nhỏ hơn 8.0: 7 điểm</li>
+                    <li>iv. Lớn hơn hoặc bằng 7.0 nhưng nhỏ hơn 7.5: 6 điểm</li>
+                    <li>v. Lớn hơn hoặc bằng 6.5 nhưng nhỏ hơn 7.0: 5 điểm</li>
+                    <li>vi. Nhỏ hơn 6.5: 0 điểm</li>
+                </ul>
+            </li>
+            <li>2. Điểm thi đại học (Qua kỳ thi tốt nghiệp THPT): Điểm Học Bạ/tổ hợp môn "Điểm Năng lực ĐHQG TP.HCM (KHTN - Nhân Văn - UEH)" điểm học bạ/tổ hợp môn Kinh tế
+                <ul>
+                    <li>i. Tuyển thẳng (do có giải quốc gia..) = Ưu tiên xét tuyển = Ưu tiên xét tuyển của ĐHQG 11 điểm</li>
+                    <li>ii. Điểm lớn hơn hoặc bằng 26 và nhỏ hơn hoặc bằng 30: 12 điểm >=28 >=950 >=70</li>
+                    <li>iii. Điểm lớn hơn hoặc bằng 24 và nhỏ hơn 26: 11 điểm 26-28 900-950 67-70</li>
+                    <li>iv. Điểm lớn hơn hoặc bằng 22 và nhỏ hơn 24: 10 điểm 24-26 850-900 63-67</li>
+                    <li>v. Điểm lớn hơn hoặc bằng 20 và nhỏ hơn 22: 9 điểm 22.5-24 800-850 60-63</li>
+                    <li>vi. Điểm lớn hơn hoặc bằng 18 và nhỏ hơn 20: 8 điểm 21.5-22.5 750-800 57-60</li>
+                    <li>vii. Điểm lớn hơn hoặc bằng 17 và nhỏ hơn 18: 7 điểm 20.5-21.5 700-750 54-57</li>
+                    <li>viii. Điểm lớn hơn hoặc bằng 16 và nhỏ hơn 17: 6 điểm 19.5-20.5 650-700 50-54</li>
+                    <li>ix. Điểm lớn hơn hoặc bằng 15 và nhỏ hơn 16: 5 điểm 18-19.5 600-650 47-50</li>
+                    <li>x. Điểm nhỏ hơn 15: 0 điểm</li>
+                    <li>*** Hệ Dự bị ĐH 5 điểm (format điểm ở các cột này: <lớn hơn hoặc bằng> - <nhỏ hơn>)</li>
+                </ul>
+            </li>
+            <li>3. Giải thưởng: Điểm này do máy chấm. Chỉ tính 1 giải thưởng cao nhất trong các năm học cấp 3, tối đa 4 điểm
+                <ul>
+                    <li>i. Giải thưởng cấp toàn quốc hoặc quốc tế: 4 điểm</li>
+                    <li>ii. Giải thưởng cấp Khu vực, Tỉnh, Thành phố trực thuộc Trung ương (HCM, HN, Đà Nẵng, Hải Phòng, Cần Thơ): 3 điểm</li>
+                    <li>iii. Giải thưởng cấp huyện hoặc thị xã hoặc thành phố trực thuộc tỉnh: 2 điểm</li>
+                </ul>
+            </li>
+        </ul>
+        <p>B. Gia cảnh 44 điểm</p>
+        <ul>
+            <li>1. Giấy xác nhận gia cảnh của địa phương: Điểm này do máy chấm.
+                <ul>
+                    <li>i. Có giấy chứng nhận hộ nghèo: 10 điểm</li>
+                    <li>ii. Có giấy chứng nhận hộ cận nghèo: 8 điểm</li>
+                    <li>iii. Có giấy xác nhận gia cảnh khó khăn: 5 điểm</li>
+                    <li>iv. Không có giấy: 0 điểm</li>
+                </ul>
+            </li>
+            <li>2. Số thành viên trong gia đình và nghề nghiệp: Điểm này do máy chấm. Mỗi hồ sơ đều sẽ bắt đầu với 5 điểm trong phần này. Sau đây là số điểm cho nghề nghiệp của mỗi anh chị em & thành viên trong gia đình:
+                <ul>
+                    <li>i. Có ông bà/cô chú (nói chung là những thành viên khác) sống chung và phụ thuộc vào cha mẹ sinh viên: +1 điểm</li>
+                    <li>ii. Anh/chị/em đang là Sinh viên: +2 điểm</li>
+                    <li>iii. Anh chị em đang là học sinh phổ thông (cấp 1-2-3) hay đang học nghề: +1 điểm</li>
+                    <li>iv. Anh/chị/em đang đi làm (nghề nghiệp không phải là làm mướn hoặc làm nông, nội trợ hay thất nghiệp) và chưa lập gia đình: -1 điểm</li>
+                    <li>v. Anh chị em đã lập gia đình, em còn nhỏ chưa đi học, đi nghĩa vụ quân sự/nghĩa vụ công an thì không cộng, không trừ: 0 điểm</li>
+                </ul>
+            </li>
+            <li>3. Sức khỏe của cha mẹ: Điểm này do máy chấm.
+                <ul>
+                    <li>i. Không còn/ không có cả cha & mẹ: 14 điểm</li>
+                    <li>ii. Không còn/ không có cha hoặc mẹ, hoặc một người đã mất: 13 điểm</li>
+                    <li>iii. Cha và mẹ đều bị bệnh hiểm nghèo: 13 điểm</li>
+                    <li>iv. Cha mẹ đã ly dị, người nuôi dưỡng mất sức lao động: 11 điểm</li>
+                    <li>v. Cha mẹ đã ly dị, sức khỏe người nuôi dưỡng bình thường: 10 điểm</li>
+                    <li>vi. Cha mẹ không ly dị và Cha hoặc mẹ bị bệnh hiểm nghèo: 12 điểm</li>
+                    <li>vii. Cha mẹ không ly dị và Cha và mẹ đều mất sức lao động: 10 điểm</li>
+                    <li>viii. Cha mẹ không ly dị và Cha và mẹ một người mất sức lao động và một người bệnh mãn tính: 9 điểm</li>
+                    <li>ix. Cha mẹ không ly dị và Cha hoặc mẹ mất sức lao động: 7 điểm</li>
+                    <li>x. Cha mẹ không ly dị và Cha và mẹ đều bị bệnh mãn tính: 7 điểm</li>
+                    <li>xi. Cha mẹ không ly dị và Cha hoặc mẹ bị bệnh mãn tính: 5 điểm</li>
+                    <li>xii. Cha và mẹ sức khỏe bình thường, đều đang làm việc được: 0 điểm</li>
+                </ul>
+            </li>
+            <li>4. Công việc làm thêm của sinh viên: Điểm này do máy chấm
+                <ul>
+                    <li>i. Sinh viên phải đi làm thêm để phụ giúp gia đình: 2 điểm</li>
+                    <li>ii. Sinh viên không phải đi làm thêm: 0 điểm</li>
+                </ul>
+            </li>
+        </ul>
+        <p>D. Điểm thưởng
+            <ul>
+                <li>i. Có thư giới thiệu của giáo viên: 2 điểm</li>
+                <li>ii. Không có thư giới thiệu: 0 điểm</li>
+            </ul>
+        </p>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var huongDanLink = document.getElementById('huong-dan');
+        var huongDanChamMayLink = document.getElementById('huong-dan-cham-may');
+        var modalHuongDan = document.getElementById('modalHuongDan');
+        var modalHuongDanChamMay = document.getElementById('modalHuongDanChamMay');
+        var closeBtns = document.getElementsByClassName('close');
+
+        // Xử lý sự kiện khi click vào link "Hướng dẫn"
+        huongDanLink.addEventListener('click', function() {
+            modalHuongDan.style.display = "block";
+        });
+
+        // Xử lý sự kiện khi click vào link "Hướng dẫn chấm máy"
+        huongDanChamMayLink.addEventListener('click', function() {
+            modalHuongDanChamMay.style.display = "block";
+        });
+
+        // Đóng modal khi click vào nút đóng
+        for (var i = 0; i < closeBtns.length; i++) {
+            closeBtns[i].addEventListener('click', function() {
+                modalHuongDan.style.display = "none";
+                modalHuongDanChamMay.style.display = "none";
+            });
+        }
+
+        // Đóng modal khi click bên ngoài nội dung
+        window.addEventListener('click', function(event) {
+            if (event.target == modalHuongDan) {
+                modalHuongDan.style.display = "none";
+            }
+            if (event.target == modalHuongDanChamMay) {
+                modalHuongDanChamMay.style.display = "none";
+            }
+        });
+    });
+</script>

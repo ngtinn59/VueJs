@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đơn Đăng Ký Học Bổng VSDP 2023</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="sidebar-header">
+            <img src="https://viethope.org/wp-content/uploads/2021/06/Cropped-VietHope-Logo-300x225.png" alt="VIETHOPE Logo" class="logo">
+            <h1>Đơn Đăng Ký Học Bổng VSDP 2024</h1>
+
+        </div>
+        <form>
+            <h2>PHẦN 1: THÔNG TIN SINH VIÊN</h2>
+            <label for="name">Mô tả sinh viên: </label>
+
+            <input type="text" id="name" name="name" required>
+
+            <label for="name">Họ và tên:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="gender">Giới tính:</label>
+            <select id="gender" name="gender" required>
+                <option value="Nam">Nam</option>
+                <option value="Nữ">Nữ</option>
+            </select>
+
+            <label for="dob">Ngày, tháng, năm sinh:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="address">Địa chỉ thường trú trên CCCD:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="city">Tỉnh/Thành phố trung ương thường trú:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="contact_address">Địa chỉ liên lạc tại thành phố sinh viên đang học:</label>
+            <input type="text" id="contact_address" name="contact_address" required>
+
+            <label for="phone1">Số điện thoại 1 - của sinh viên:</label>
+            <input type="tel" id="phone1" name="phone1" required>
+
+            <label for="phone2">Số điện thoại 2 - ghi rõ của ai:</label>
+            <input type="text" id="phone2" name="phone2" required>
+
+            <label for="id_number">Số CMND/CCCD/ID:</label>
+            <input type="text" id="id_number" name="id_number" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="university">Tên trường:</label>
+            <input type="text" id="university" name="university" required>
+
+            <label for="major">Ngành học:</label>
+            <input type="text" id="major" name="major" required>
+
+            <label for="class">Lớp:</label>
+            <input type="text" id="class" name="class">
+
+            <label for="student_id">Mã số sinh viên:</label>
+            <input type="text" id="student_id" name="student_id">
+
+            <label for="job_status">Sinh viên có ĐANG đi làm thêm không?</label>
+            <select id="job_status" name="job_status" required>
+                <option value="Có">Có</option>
+                <option value="Không">Không</option>
+            </select>
+
+            <label for="job_description">Nếu có làm thêm, đó là công việc gì?</label>
+            <input type="text" id="job_description" name="job_description">
+
+            <label for="income">Thu nhập/tháng từ công việc làm thêm:</label>
+            <input type="text" id="income" name="income">
+
+            <h2>PHẦN 2: THÔNG TIN HỌC TẬP</h2>
+            <label for="admission_method">Sinh viên đã trúng tuyển đại học đang học theo phương thức tuyển sinh nào?</label>
+            <select id="admission_method" name="admission_method" required>
+                <option value="Xét kết quả thi tốt nghiệp">Xét kết quả thi tốt nghiệp</option>
+                <option value="Xét điểm học bạ theo tổ hợp môn">Xét điểm học bạ theo tổ hợp môn</option>
+                <option value="Xét điểm học bạ theo điểm trung bình chung">Xét điểm học bạ theo điểm trung bình chung</option>
+                <option value="Tuyển thẳng đại học">Tuyển thẳng đại học</option>
+                <option value="Thi đánh giá năng lực của Đại học Quốc gia TP.HCM/HN">Thi đánh giá năng lực của Đại học Quốc gia TP.HCM/HN</option>
+                <option value="Xét tuyển đặc cách công nhận tốt nghiệp THPT 2023">Xét tuyển đặc cách công nhận tốt nghiệp THPT 2023</option>
+                <option value="Dự bị Đại học">Dự bị Đại học</option>
+            </select>
+
+            <label for="exam_score">Điểm thi THPT Quốc gia 2023 - Nếu trúng tuyển Đại học theo hình thức thi THPT (điểm thực, trên thang điểm 30, đã tính điểm cộng): <br>
+                Dùng dấu chấm để phân cách. Ví dụ: 22.75 ; 26.5
+            </label>
+            <input type="text" id="exam_score" name="exam_score">
+
+            <label for="school_report_score">Điểm học bạ THPT - Nếu trúng tuyển theo phương thức xét điểm học bạ THPT:</label>
+            <input type="text" id="school_report_score" name="school_report_score">
+
+            <label for="competency_test_score">Điểm thi đánh giá năng lực - Nếu trúng tuyển Đại học theo phương thức thi đánh giá năng lực của Đại học Quốc gia TPHCM/HN:</label>
+            <input type="text" id="competency_test_score" name="competency_test_score">
+
+            <label for="subject_combination_score">Tổng điểm các môn trong tổ hợp xét tuyển - Nếu trúng tuyển theo phương thức xét tuyển tổ hợp môn:</label>
+            <input type="text" id="subject_combination_score" name="subject_combination_score">
+
+            <label for="special_admission_score">Tổng điểm xét tuyển của phương thức đặc cách công nhận tốt nghiệp THPT 2023:</label>
+            <input type="text" id="special_admission_score" name="special_admission_score">
+
+            <label for="avg_grade_10">Điểm trung bình lớp 10:</label>
+            <input type="text" id="avg_grade_10" name="avg_grade_10" required>
+
+            <label for="avg_grade_11">Điểm trung bình lớp 11:</label>
+            <input type="text" id="avg_grade_11" name="avg_grade_11" required>
+
+            <label for="avg_grade_12">Điểm trung bình lớp 12:</label>
+            <input type="text" id="avg_grade_12" name="avg_grade_12" required>
+
+            <label for="academic_awards">Liệt kê các giải thưởng liên quan đến HỌC TẬP từ THPT đến nay: <br>
+                Ví dụ: Giải Ba môn Toán cấp Quốc Gia lớp 12; Giải Nhì môn Toán cấp Tỉnh lớp 11; ...</label>
+            <textarea id="academic_awards" name="academic_awards"></textarea>
+
+            <label for="highest_award_level">Giải thưởng học tập cao nhất là cấp: <br>
+                Lưu ý: Chỉ chọn cấp độ cao nhất của giải thưởng là cấp Tỉnh hay Quốc gia...</label>
+            <select id="highest_award_level" name="highest_award_level">
+                <option value="Quận/Huyện/Thành phố trực thuộc Tỉnh">Quận/Huyện/Thành phố trực thuộc Tỉnh</option>
+                <option value="Khu vực/ Tỉnh/ Thành phố TW">Khu vực/ Tỉnh/ Thành phố TW</option>
+                <option value="Quốc gia">Quốc gia</option>
+                <option value="Quốc tế">Quốc tế</option>
+                <option value="Khác">Khác</option>
+            </select>
+
+            <label for="scholarships_received">Liệt kê những học bổng sinh viên đã nhận được tính từ THPT đến nay: <br>
+                Cú pháp: [Tên học bổng] - [Giá trị học bổng]. Ví dụ: Học bổng Thắp sáng ước mơ - 10 triệu
+            </label>
+            <textarea id="scholarships_received" name="scholarships_received"></textarea>
+
+            <label for="reference_letter">Sinh viên có Thư giới thiệu của giáo viên dạy THPT không? <br>
+                Lưu ý: Không bắt buộc nhưng sẽ là một lợi thế để VietHope có thể hiểu rõ hơn về bạn.
+            </label>
+            <select id="reference_letter" name="reference_letter" required>
+                <option value="Có">Có</option>
+                <option value="Không">Không</option>
+            </select>
+
+            <h2>PHẦN 3: THÔNG TIN GIA ĐÌNH</h2>
+            <label for="parent1">Họ tên Cha:</label>
+            <input type="text" id="parent1" name="parent1" required>
+
+            <label for="parent1_dob">Năm sinh:</label>
+            <input type="text" id="parent1_dob" name="parent1_dob">
+            
+            <label for="special_case">Tình trạng sức khỏe cha </label>
+            <select id="special_case" name="special_case" required>
+                <option value="Bình thường">Bình thường</option>
+                <option value="Mất">Mất</option>
+                <option value="Không có/ Bỏ đi từ lâu">Không có/ Bỏ đi từ lâu</option>
+                <option value="Bị bệnh mãn tính">Bị bệnh mãn tính</option>
+                <option value="Mất sức lao động">Mất sức lao động</option>
+                <option value="Bị bệnh hiểm nghèo">Bị bệnh hiểm nghèo</option>
+            </select>
+
+            <label for="parent2_education">Nếu cha bị bệnh, ghi rõ bệnh gì hoặc lý do mất sức lao động: <br>
+                Ví dụ: Thoái hóa cột sống/ Già yếu mất sức lao động/ Tai nạn giao thông/...
+            </label>
+            <input type="text" id="parent2_education" name="parent2_education">
+
+            <label for="parent2_job">Nghề nghiệp của cha:</label>
+            <input type="text" id="parent2_job" name="parent2_job">
+
+            <label for="special_case">Trình độ học vấn: </label>
+            <select id="special_case" name="special_case" required>
+                <option value="Tiểu học">Tiểu học</option>
+                <option value="THCS">THCS</option>
+                <option value="THPT">THPT</option>
+                <option value="Đại học">Đại học</option>
+                <option value="Không đi học">Không đi học</option>
+                <option value="Không biết">Không biết</option>
+            </select>   
+
+            <label for="parent2_income">Thu nhập/tháng của cha: <br>
+                Bằng VND, chỉ điền số tiền, dùng dấu phẩy để phân cách hàng nghìn. Ví dụ: 3,000,000
+            </label>
+
+            <label for="parent1">Họ tên Mẹ:</label>
+            <input type="text" id="parent1" name="parent1" required>
+
+            <label for="parent1_dob">Năm sinh:</label>
+            <input type="text" id="parent1_dob" name="parent1_dob">
+            
+            <label for="special_case">Tình trạng sức khỏe Mẹ </label>
+            <select id="special_case" name="special_case" required>
+                <option value="Bình thường">Bình thường</option>
+                <option value="Mất">Mất</option>
+                <option value="Không có/ Bỏ đi từ lâu">Không có/ Bỏ đi từ lâu</option>
+                <option value="Bị bệnh mãn tính">Bị bệnh mãn tính</option>
+                <option value="Mất sức lao động">Mất sức lao động</option>
+                <option value="Bị bệnh hiểm nghèo">Bị bệnh hiểm nghèo</option>
+            </select>
+
+            <label for="parent2_education">Nếu Mẹ bị bệnh, ghi rõ bệnh gì hoặc lý do mất sức lao động: <br>
+                Ví dụ: Thoái hóa cột sống/ Già yếu mất sức lao động/ Tai nạn giao thông/...
+            </label>
+            <input type="text" id="parent2_education" name="parent2_education">
+
+            <label for="parent2_job">Nghề nghiệp của Mẹ:</label>
+            <input type="text" id="parent2_job" name="parent2_job">
+
+            <label for="special_case">Trình độ học vấn: </label>
+            <select id="special_case" name="special_case" required>
+                <option value="Tiểu học">Tiểu học</option>
+                <option value="THCS">THCS</option>
+                <option value="THPT">THPT</option>
+                <option value="Đại học">Đại học</option>
+                <option value="Không đi học">Không đi học</option>
+                <option value="Không biết">Không biết</option>
+            </select>   
+
+            <label for="parent2_income">Thu nhập/tháng của Mẹ: <br>
+                Bằng VND, chỉ điền số tiền, dùng dấu phẩy để phân cách hàng nghìn. Ví dụ: 3,000,000
+            </label>
+            <input type="text" id="parent2_income" name="parent2_income">
+
+            <label for="siblings_count">Nơi ở hiện tại của cha mẹ:</label>
+            <input type="text" id="siblings_count" name="siblings_count">
+
+            <label for="special_case">Tình trạng hôn nhân của cha mẹ: </label>
+            <select id="special_case" name="special_case" required>
+                <option value="Bình thường">Bình thường</option>
+                <option value="Li dị">Li dị</option>
+                <option value="Li thân">Li thân</option>
+            </select>  
+
+            <label for="special_case">Nếu cha mẹ ly dị thì người còn lại có đóng góp/trợ cấp nuôi con không? </label>
+            <select id="special_case" name="special_case" required>
+                <option value="Có">Có</option>
+                <option value="Không">Không</option>
+            </select>  
+
+
+            <label for="special_case">Sinh viên có Giấy Chứng Nhận Hộ Nghèo/ Hộ Cận nghèo hay Giấy xác nhận gia cảnh khó khăn không? </label>
+            <select id="special_case" name="special_case" required>
+                <option value="Có giấy chứng nhận hộ nghèo">Có giấy chứng nhận hộ nghèo</option>
+                <option value="Có giấy chứng nhận hộ cận nghèo">Có giấy chứng nhận hộ cận nghèo</option>
+                <option value="Có giấy xác nhận gia cảnh khó khăn">Có giấy xác nhận gia cảnh khó khăn</option>
+                <option value="Không có">Không có</option>
+
+            </select> 
+
+            <label for="special_case">Liệt kê những thành viên CÒN LẠI trong gia đình (KHÔNG bao gồm cha, mẹ và chính bản thân sinh
+                viên): ông bà (sống cùng ba mẹ), anh chị em ruột (xem kỹ hướng dẫn) hoặc người thân khác Ở CÙNG gia đình: <br>
+                Với mỗi dòng một thành viên, sinh viên nêu rõ Họ và tên, Tuổi, Quan hệ với sinh viên, Nghề nghiệp, Thu nhập, Lập gia
+                đình hay chưa, Chỗ ở hiện nay (các thông tin cách nhau bởi dấu ",").
+                Nếu không còn ông bà và không có anh chị em thì ghi là Không có.
+            
+                Ví dụ 1:
+                <br>
+                - Nguyễn Văn Sơn, 70 tuổi, ông nội, ở với ba mẹ
+                <br>
+                - Nguyễn Văn Bình, 30 tuổi, anh ruột, công nhân, 5.000.000, đã có gia đình, Dĩ An - Bình Dương.
+                <br>
+                - Nguyễn Thị Nhi, 25 tuổi, chị ruột, kế toán, 6.000.000, chưa có gia đình, ở Sài Gòn.
+                <br>
+            
+                - Nguyễn Thị Ánh, 21 tuổi, chị ruột, sinh viên, 0, chưa có gia đình, Làng ĐH Thủ Đức.
+                <br>
+            
+                - Nguyễn Văn Út, 10 tuổi, học sinh lớp 5, ở với ba mẹ.
+                <br>
+            
+                - ...
+                <br>
+                Ví dụ 2: Không có
+            </label>
+
+            <label for="sibling_education">Sinh viên trả lời về chi tiết thành viên trong gia đình ở đây: </label>
+            <textarea id="sibling_education" name="sibling_education"></textarea>
+
+            <label for="sibling_job">(1) Số ông/bà đang sống chung <br>
+                Chỉ điền một số. Ví dụ: 1
+            </label>
+            <textarea id="sibling_job" name="sibling_job"></textarea>
+            
+
+            <label for="sibling_job">(2) Số anh/chị/em Đã lập gia đình <br>
+                Chỉ điền một số. Ví dụ: 1
+            </label>
+            <textarea id="sibling_job" name="sibling_job"></textarea>
+
+
+            <label for="sibling_job">(3) Số anh/chị/em CHƯA lập gia đình và đang là sinh viên (không tính sinh viên đang làm đơn) <br>
+                Chỉ điền một số. Ví dụ: 2
+            </label>
+            <textarea id="sibling_job" name="sibling_job"></textarea>
+
+            <label for="sibling_job">(4) Số anh/chị/em CHƯA lập gia đình và đang học phổ thông (cấp 1-2-3) hay học nghề <br>
+                Chỉ điền một số. Ví dụ: 1
+            </label>
+            <textarea id="sibling_job" name="sibling_job"></textarea>
+
+            <label for="sibling_job">(5) Số anh/chị/em CHƯA lập gia đình và đang làm nông, làm mướn, thất nghiệp, nội trợ HAY còn nhỏ chưa đi học <br>
+                Chỉ điền một số. Ví dụ: 1
+            </label>
+            <textarea id="sibling_job" name="sibling_job"></textarea>
+
+            <label for="sibling_job">(6) Số anh/chị/em CHƯA lập gia đình và làm các nghề khác như công nhân, giáo viên, bộ đội, kỹ sư,... <br>
+                Chỉ điền một số. Ví dụ: 0
+            </label>
+            <textarea id="sibling_job" name="sibling_job"></textarea>
+
+
+            <label for="sibling_job">(7) Tổng số thành viên ĐÃ NÊU Ở TRÊN trong gia đình, BAO GỒM anh chị em ruột, ông bà (đang sống chung với cha mẹ) hoặc người thân khác Ở CÙNG gia đình; KHÔNG bao gồm cha, mẹ và chính sinh viên. <br>
+                Chỉ điền một số Tổng=(1)+(2)+(3)+(4)+(5)+(6) Lưu ý con số này phải bằng tống 6 con số chi tiết về thành viên dưới đây cộng lại. Ví dụ: 6            </label>
+            <textarea id="sibling_job" name="sibling_job"></textarea>
+
+            <h2>PHẦN 4: TRÌNH BÀY</h2>
+            <p>❗Lưu ý: Đây là 2 câu tự luận cần sự đầu tư về thời gian và nội dung, do đó các bạn nên làm một bản nháp trên word trước khi nộp, sau khi kiểm tra kỹ hãy copy qua.</p>
+            
+            <label for="sibling_job">1/ Bạn hãy trình bày một cách chi tiết nhất về hoàn cảnh gia đình mình hiện nay và những khó khăn, thử thách đã gặp phải khi theo đuổi việc học. (Từ 300 - 1000 từ) <br>
+                Trình bày rõ ràng sẽ là một lợi thế để VietHope có thể hiểu rõ hơn về bạn.
+            </label>
+            <textarea id="sibling_job" name="sibling_job"></textarea>
+
+            <label for="sibling_job">2/ Theo bạn những phẩm chất/ thế mạnh gì đã giúp bạn vượt qua những khó khăn trong quá khứ để tiếp tục việc học? Trong những năm học đại học sắp tới, những thách thức lớn nhất của bạn là gì? Bạn dự định sẽ sử dụng những thế mạnh của mình để vượt qua những thách thức đó như thế nào để theo đuổi con đường học vấn?  Khuyến khích miêu tả chi tiết và có sử dụng ví dụ cụ thể cho những ý trình bày. <br>
+                Trình bày rõ ràng sẽ là một lợi thế để VietHope có thể hiểu rõ hơn về bạn.
+            </label>
+            <textarea id="sibling_job" name="sibling_job"></textarea>
+            <h2>PHẦN 5: MINH CHỨNG CÁC TÀI LIỆU LIÊN QUAN</h2>
+            <label for="sibling_job">🌟 Những câu hỏi yêu cần bản scan file đính kèm, sinh viên có thể dùng một số cách:
+                <br>
+                ✅ Scan trực tiếp từ tiệm photocopy.
+                <br>
+                ✅ Tải app CamScanner (Android/IOS).
+                <br>
+                ✅ Chụp ảnh bằng điện thoại.
+                <br>
+                ❗Lưu ý:
+                <br>
+                🔷Các bạn phải giữ trang giấy thẳng, không cong hay xiêu vẹo, chụp ngay ngắn, đủ 4 góc, rõ hình rõ chữ.
+                <br>
+ 
+                🔷 Bắt buộc: chụp ảnh dạng đứng, không xoay điện thoại ngang để chụp)
+                <br>
+                
+                ❌❌❌ QUAN TRỌNG:
+                <br>
+ 
+                🌟ĐẶT TÊN FILE ĐÍNH KÈM: Tất cả các File đính kèm sinh viên đặt tên theo cú pháp: [Họ tên]-[Loại giấy tờ]. Ví dụ: Nguyễn Văn A-Chân dung
+            </label>
+            <label for="student_photo">Ảnh chân dung sinh viên (6 tháng gần nhất - hình ảnh nghiêm túc, thấy rõ mặt):</label>
+            <input type="file" id="student_photo" name="student_photo" accept="image/*" required>
+            <p>Ví dụ: Nguyễn Văn A - Chân dung</p>
+
+            <label for="student_photo">Giấy báo nhập học của trường có thể hiện điểm thi/ kết quả xét tuyển theo một trong các phương thức trên (scan file đính kèm):</label>
+            <input type="file" id="student_photo" name="student_photo" accept="image/*" required>
+            <p>Ví dụ: Nguyễn Văn A-Giấy báo nhập học. </p>
+
+            <label for="student_photo">Bảng điểm học bạ lớp 12 (scan đính kèm - chỉ scan 1 trang bảng điểm lớp 12):</label>
+            <input type="file" id="student_photo" name="student_photo" accept="image/*" required>
+            <p>Ví dụ: Nguyễn Văn A-Bảng điểm.</p>
+
+            <label for="student_photo">Giấy chứng nhận giải thưởng học tập cao nhất (nếu có):</label>
+            <input type="file" id="student_photo" name="student_photo" accept="image/*" required>
+            <p>Ví dụ: Nguyễn Văn A-GCN giải thưởng.</p>
+            
+            <label for="student_photo">Thư giới thiệu của giáo viên dạy THPT (nếu có):</label>
+            <input type="file" id="student_photo" name="student_photo" accept="image/*" required>
+            <p>Ví dụ: Nguyễn Văn A-Thư giới thiệu.</p>
+
+
+            <label for="student_photo">Giấy Chứng Nhận Hộ Nghèo/ Hộ Cận Nghèo hay Giấy xác nhận hoàn cảnh khó khăn (nếu có):</label>
+            <input type="file" id="student_photo" name="student_photo" accept="image/*" required>
+            <p>Ví dụ: Nguyễn Văn A-Giấy chứng nhận hộ nghèo</p>
+
+            <h2>CẢM ƠN BẠN ĐÃ ĐIỀN LINK ĐĂNG KÝ HỌC BỔNG VSDP 2024</h2>
+            <p>Cảm ơn bạn đã hoàn thành đơn học bổng VSDP,  thông tin xác nhận nhận hồ sơ sẽ được đăng tải trên trang web www.viethope.org. <br> 
+                ______<br> 
+                💁‍♀️THÔNG TIN LIÊN HỆ:<br> 
+                🩸 Chị Ngọc Thanh - Tình nguyện viên tại USSH<br> 
+                💌 qmira.tngocthanhwork@gmail.com |📞 0979755205<br> 
+                🩸Chị Khánh Trúc - Quản lý chương trình học bổng USP<br> 
+                💌truc.ngo@viethope.org |📞0329100405<br> 
+                
+                ❗Hãy gửi về VietHope nếu bạn đã chắc chắn về độ chính xác của những thông tin bên trên. VietHope chúc bạn thành công!</p>
+
+            <label for="special_case">Bạn biết đến học bổng VSDP 2024 qua đâu? </label>
+            <select id="special_case" name="special_case" required>
+                <option value="Có giấy chứng nhận hộ nghèo">Website/Fanpage chính thức của Viethope</option>
+                <option value="Có giấy chứng nhận hộ cận nghèo">Website/ Fanpage của trường</option>
+                <option value="Có giấy xác nhận gia cảnh khó khăn">Phòng Công tác sinh viên/ Phòng chăm sóc và Hỗ trợ người học của trường</option>
+                <option value="Không có">Các CLB/ Đội/ Nhóm tại trường</option>
+                <option value="Không có">Other…</option>
+
+            </select> 
+            <label for="sibling_education">Tên cụ thể của kênh thông tin mà bạn biết đến học bổng VSDP 2024 là? <br>
+            <p>Ví dụ: Phòng Chăm sóc và hỗ trợ người học UEH</p>
+            </label>
+            <textarea id="sibling_education" name="sibling_education"></textarea>
+            <button type="submit">Gửi Đơn</button>
+
+        </form>
+    </div>
+</body>
+</html>

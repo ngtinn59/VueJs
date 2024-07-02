@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Chấm Điểm</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <div class="sidebar">
+    <div class="sidebar-header">
+        <img src="https://viethope.org/wp-content/uploads/2021/06/Cropped-VietHope-Logo-300x225.png" alt="" class="logo">
+        <ul class="sidebar-menu">
+          <li class="sidebar-item">
+            <a href="#"><i class="fa-solid fa-house"></i>Trang chủ</a>
+            <a href="#"><i class="fa-solid fa-user-tie"></i>Quản trị viên</a>
+            <a href="/DashBoard/phongvan/index.html"><i class="fa-solid fa-list"></i></i>Phỏng vấn</a>
+            <a href="#"><i class="fa-solid fa-right-from-bracket"></i>Đăng xuất</a>
+            <a href="#"><i class="fa-solid fa-circle-info"></i>Hướng dẫn</a>
+          </li>
+      </ul>
+    </div>
+    
+</div>
+
+<div class="content">
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Mã hồ sơ</th>
+          <th>Họ và tên</th>
+          <th>Giới tính theo khai sinh</th>
+          <th>TỔNG ĐIỂM MÁY CHẤM</th>
+          <th>Vòng chấm hồ sơ</th>
+          <th>ĐIỂM CHẤM TNV A</th>
+          <th>ĐIỂM CHẤM TNV B</th>
+          <th>CHÊNH LỆCH</th>
+          <th>CHẤM LẠI</th>
+          <th>ĐIỂM CHẤM TNV C</th>
+          <th>VÒNG PHỎNG VẤN</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>NVSG23001</td>
+          <td>Lư Hữu Phước</td>
+          <td>Nam</td>
+          <td>24</td>
+          <td>loại</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>NVSG23081</td>
+          <td>Lê Khánh Ngân</td>
+          <td>Nữ</td>
+          <td>31</td>
+          <td>chấm</td>
+          <td>11</td>
+          <td>44</td>
+          <td class="difference">33</td>
+          <td>Chấm lại</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>NVSG23002</td>
+          <td>Nguyễn Văn A</td>
+          <td>Nam</td>
+          <td>35</td>
+          <td>chấm</td>
+          <td>50</td>
+          <td>19</td>
+          <td class="difference">31</td>
+          <td>Chấm lại</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>NVSG23003</td>
+          <td>Trần Thị B</td>
+          <td>Nữ</td>
+          <td>48</td>
+          <td>chấm</td>
+          <td>36</td>
+          <td>39</td>
+          <td class="difference"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
